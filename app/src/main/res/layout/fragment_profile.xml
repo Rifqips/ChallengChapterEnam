@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_turquoise"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.ProfileFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/favoritesToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_late_gray">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textColor="@color/light_gray"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/profile" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extended_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/img_profile_user"
+        android:backgroundTint="@color/dark_late_gray"
+        android:contentDescription="amsc samc sakjc s"
+        android:fontFamily="@font/poppins_medium"
+        android:shadowColor="@color/black"
+        android:text="@string/change_profile_picture"
+        android:textAllCaps="false"
+        android:textColor="@color/white_smoke"
+        app:icon="@drawable/ic_baseline_photo_camera_24"
+        app:iconTint="@color/white_smoke"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile_user"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:civ_border_color="@color/dark_late_gray"
+        app:civ_border_width="8dp"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_profile"/>
+
+    <LinearLayout
+        android:id="@+id/lyProfile"
+        android:layout_below="@+id/extended_fab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_rounded"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:hint="@string/username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_rounded"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama_lengkap">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_rounded"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:hint="@string/tanggal_lahir">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_rounded"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/alamat">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_rounded"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update"
+            android:layout_below="@+id/lyProfile"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_bg"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:layout_below="@+id/btnUpdate"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_bg"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
